@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascrip1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="./jquery.js"></script>
+</head>
+
+
+<body style="padding: 20px;margin: 40px;">
+
+    <input id="text" placeholder="hello" />
+    <input type="text" name="" id="text1">
+    <button onclick="f1()" id='btn'> click me</button>
+    <br>
+    <br>
+    <input type="radio" id="rd1" name="1" value="hello"> helo
+    <input type="radio" id="rd2" name="1" value="hello2"> hello1
+    <button onclick="f2()">click me</button>
+    <br>
+    <br>
+    <select name="" id="selectbox">
+        <option value="hello">hello</option>
+        <option value="hello1">hello1</option>
+        <option value="hello2">hello2</option>
+    </select>
+    <button onclick="f3()">click</button>
+    <p id="h0">this is a paragraph</p>
+    <h1 id="he">this is a paragraph</h1>
+    <p>this is a paragraph</p>
+    <p>this is a paragraph</p>
+    <p>this is a paragraph</p>
+    <p>this is a paragraph</p>
+    <button onclick="f4()">click me</button>
+    <br>
+    <br>
+    <img onmouseover="f5()" onmouseout="f6()" src="https://picsum.photos/id/1/200/300">
+    <br>
+    <br>
+    <form class="form-inline">
+        <div class="form-group mb-2">
+            <label for="staticEmail2" class="sr-only">Email</label>
+            <input onkeyup='f7()' type="text" class="form-control-plaintext" id="2" value="email@example.com">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="inputPassword2" class="sr-only">Password</label>
+            <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+    </form>
+    <button type="submit" onclick="f10()" class="btn btn-primary mb-2">Confirm identity</button>
+</body>
+<script src="./js1.js"></script>
+
+</html>
