@@ -41,3 +41,40 @@ function convert(e){
     list[2].firstChild.textContent =  `${Number(e.target.value)*1000} mjg ` 
     
 }
+
+const get = document.querySelector('#i')
+
+get.addEventListener('click',getData)
+
+function getData(){
+    fetch('hello.txt').then(function(i){
+        return i.text()
+    }).then((data) => {
+        document.getElementById('h').innerHTML = data
+    }) 
+}
+
+const datas = document.getElementById('dhe')
+
+datas.addEventListener('click',dataList)
+
+function dataList(){
+    fetch('data.json')
+    .then((list) => list.json())
+    .then((dataitems) =>{
+        let ww = ''
+        dataitems.forEach( 
+            function(countries){
+           
+            ww += `<h1>countries</h1>
+                    <ul>
+                <li>name:${countries.name} </li>
+                <li>name:${countries.abbr} </li>
+                <li>name:${countries.captial} </li>
+            </ul>`
+             
+        })
+        document.getElementById('dw').innerHTML = ww
+        
+    })
+}
