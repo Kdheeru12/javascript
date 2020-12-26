@@ -1,3 +1,4 @@
+
 const search = document.querySelector('input')
 const match = document.querySelector('.match')
 
@@ -6,7 +7,7 @@ search.addEventListener('input',() =>searchStates(search.value))
 const jso = () =>{
      fetch('data.json')
     .then((i) => i.json())
-    .then((j) => console.log(j) )
+    .then((j) => console.log(j))
 } 
 
  
@@ -30,3 +31,17 @@ const searchStates = async searchText =>{
     })
     match.innerHTML = output
 }
+
+async function getCountryName(code) {
+    const i = await fetch('https://jsonmock.hackerrank.com/api/countries?page=1')
+    const states = await i.json()
+    let matches = states.data.filter( (j) =>{
+        const regex = new RegExp(`^${code}`,'gi')
+        console.log(j.alpha2Code);
+        if(j.alpha2Code.match(regex)){
+            console.log(j.name);  
+        }
+    })
+    console.log(matches)
+}
+getCountryName('AF')
